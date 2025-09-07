@@ -12,15 +12,17 @@ export default function App() {
   return (
     <>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/services" element={<ServicesPage />} />
-        <Route path="/team" element={<TeamPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/404" element={<NotFoundPage />} />
-        <Route path="*" element={<Navigate to="/404" replace />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/"        element={<HomePage />} />
+          <Route path="/about"   element={<AboutPage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/team"    element={<TeamPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/404"     element={<NotFoundPage />} />
+          <Route path="*"        element={<Navigate to="/404" replace />} />
+        </Routes>
+      </main>
       <footer className="footer">
         Integral Design • Bangalore
       </footer>

@@ -1,5 +1,4 @@
 import React from 'react';
-
 export default function NotFoundPage() {
   return (
     <div className="section" style={{ textAlign: 'center' }}>

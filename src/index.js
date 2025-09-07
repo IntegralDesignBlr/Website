@@ -1,14 +1,12 @@
-// src/index.js
 import React from 'react';
-import { createRoot } from 'react-dom/client';        // ← new import
+import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import { ThemeProvider } from './theme/ThemeContext';  // adjust if you named it differently
+import { ThemeProvider } from './theme/ThemeContext';
 import App from './App';
-import './App.css';                                    // your global styles
+import './App.css';
 
 const container = document.getElementById('root');
-const root = createRoot(container);                   // ← create the root
-
+const root = createRoot(container);
 root.render(
   <ThemeProvider>
     <BrowserRouter>

@@ -9,21 +9,19 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="logo">
-        <img src={Logo} alt="Logo" />
-        <span>Integral Design</span>
+        <img src={Logo} alt="INTEGRAL" />
+        <span>INTEGRAL DESIGN</span>
       </div>
       <div className="nav-links">
         <NavLink to="/"       className="nav-link">Home</NavLink>
         <NavLink to="/about"  className="nav-link">About</NavLink>
         <NavLink to="/services" className="nav-link">Services</NavLink>
-        <NavLink to="/portfolio" className="nav-link">Portfolio</NavLink>
         <NavLink to="/team"   className="nav-link">Team</NavLink>
-        <NavLink to="/process" className="nav-link">Process</NavLink>
         <NavLink to="/contact" className="nav-link">Contact</NavLink>
       </div>
       <button onClick={toggleTheme} className="theme-toggle">
         {theme === 'light' ? '🌙 Dark' : '☀️ Light'}
       </button>
     </nav>
-);
+  );
 }
