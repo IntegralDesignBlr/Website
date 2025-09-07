@@ -90,7 +90,10 @@ main, .hero, .section {
   justify-content: center; align-items: center;
   padding: 2rem;
   background:
-    linear-gradient(135deg, var(--accent-color) 40%, var(--link-hover) 100%),
+    linear-gradient(135deg,
+      rgba(13, 151, 136, 0.7),
+      rgba(20, 184, 166, 0.7)
+    ),
     url('./assets/hero-bg.jpg') center/cover no-repeat fixed;
   background-blend-mode: overlay;
   color: #fff;
@@ -175,12 +178,26 @@ main, .hero, .section {
   gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
+
+/* SERVICE CARD */
 .service-card {
-  padding: 1.5rem;
+  background: rgba(88, 99, 143, 0.9);
+  border-radius: 8px;
+  padding: 2rem 1.5rem;
   text-align: center;
-  border-radius: 6px;
-  border: 1px solid var(--accent-color);
-  background: rgba(255,255,255,0.9);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card h3 {
+  margin: 1rem 0 0.5rem;
+  color: var(--accent-color);
+  font-size: 1.25rem;
+}
+
+.service-card p {
+  color: var(--text-color);
+  line-height: 1.6;
+  font-size: 0.95rem;
 }
 
 /* TEAM ICONS */
