@@ -22,7 +22,7 @@ export default function App() {
         <Route path="*" element={<Navigate to="/404" replace />} />
       </Routes>
       <footer className="footer">
-        Integral Smart Home Automation • E-203 Mirabilis, Horamavu, Bangalore
+        Integral Design • Bangalore
       </footer>
     </>
   );

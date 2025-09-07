@@ -10,7 +10,7 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="logo">
         <img src={Logo} alt="Logo" />
-        <span>Integral Smart Automation</span>
+        <span>Integral Design</span>
       </div>
       <div className="nav-links">
         <NavLink to="/"       className="nav-link">Home</NavLink>

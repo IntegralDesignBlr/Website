@@ -15,7 +15,7 @@ export default function About() {
       <img src={Icon} alt="About Icon" style={{ width: 48 }} />
       <h2>Who We Are</h2>
       <p>
-        Integral Smart Automation blends decades of analog design with cutting-edge
+        Integral Design blends decades of analog design with cutting-edge
         digital integration. From Netra-SOC edge-AI platforms to InCore’s RISC-V
         SoC generators, our expertise spans industrial, automotive, and healthcare.
       </p>
