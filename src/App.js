@@ -1,31 +1,31 @@
 import React from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
-import Navbar       from './components/Navbar';
-import HomePage     from './pages/HomePage';
-import AboutPage    from './pages/AboutPage';
+import { Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import HomePage from './pages/HomePage';
 import ServicesPage from './pages/ServicesPage';
-import TeamPage     from './pages/TeamPage';
-import ContactPage  from './pages/ContactPage';
+import AboutPage from './pages/AboutPage';
+import TeamPage from './pages/TeamPage';
+import ContactPage from './pages/ContactPage';
 import NotFoundPage from './pages/NotFoundPage';
 
-export default function App() {
+function App() {
   return (
     <>
       <Navbar />
       <main>
         <Routes>
-          <Route path="/"        element={<HomePage />} />
-          <Route path="/about"   element={<AboutPage />} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/services" element={<ServicesPage />} />
-          <Route path="/team"    element={<TeamPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/team" element={<TeamPage />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/404"     element={<NotFoundPage />} />
-          <Route path="*"        element={<Navigate to="/404" replace />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
-      <footer className="footer">
-        Integral Design • Bangalore
-      </footer>
+      <Footer />
     </>
   );
 }
+
+export default App;

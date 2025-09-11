@@ -1,0 +1,75 @@
+.contact {
+  padding: 5vw 0 4vw 0;
+  background: linear-gradient(to right, #19aeae33 0%, #01263a 100%);
+  color: #10131b;
+  text-align: center;
+}
+
+.contact-form {
+  margin: 0 auto;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  background: #ffffffcc;
+  border-radius: 18px;
+  padding: 2.2rem 1.2rem;
+  box-shadow: 0 2px 19px 0 rgba(23, 233, 224, 0.12);
+}
+.input-group {
+  display: flex;
+  align-items: center;
+  background: #ecf9f8;
+  border-radius: 9px;
+  padding: 0.9rem;
+  gap: 0.6rem;
+}
+.input-icon {
+  color: #17e9e0;
+}
+input[type="text"], input[type="email"] {
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 1rem;
+  width: 100%;
+  color: #0a2540;
+}
+textarea {
+  background: #ecf9f8;
+  border-radius: 9px;
+  border: none;
+  padding: 0.9rem;
+  width: 100%;
+  resize: vertical;
+  font-size: 1rem;
+  min-height: 78px;
+  color: #0a2540;
+  margin-bottom: 0.5rem;
+}
+.submit-btn {
+  background: #17e9e0;
+  color: #0a2540;
+  border: none;
+  border-radius: 22px;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.7rem 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: background 0.23s;
+}
+.submit-btn:hover {
+  background: #2fffbe;
+}
+.form-success {
+  color: #19aeae;
+  margin-top: 1.2rem;
+  font-size: 1.08rem;
+}
+
+@media (max-width: 900px) {
+  .contact-form { padding: 2rem 0.5rem; }
+}
