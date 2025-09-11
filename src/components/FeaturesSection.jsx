@@ -19,7 +19,7 @@ const FeaturesSection = () => {
             </ul>
           </div>
           <div className="features-image animate-fade-in">
-            <img src="/images/chip-design.jpg" alt="Semiconductor Design" />
+            <img src="/images/backgrounds/abstract-fluid.jpg" alt="Semiconductor Design" />
           </div>
         </div>
       </div>

@@ -2,11 +2,11 @@ import React from 'react';
 import './Clients.css';
 
 const clients = [
-  { id: 1, name: "TechCorp", logo: "client1" },
-  { id: 2, name: "InnovateSemi", logo: "client2" },
-  { id: 3, name: "CircuitSolutions", logo: "client3" },
-  { id: 4, name: "NexGen Electronics", logo: "client4" },
-  { id: 5, name: "SiliconVentures", logo: "client5" }
+  { id: 1, name: "TechCorp", logo: "backgrounds/abstract-art-1" },
+  { id: 2, name: "InnovateSemi", logo: "backgrounds/abstract-art-2" },
+  { id: 3, name: "CircuitSolutions", logo: "backgrounds/abstract-art-3" },
+  { id: 4, name: "NexGen Electronics", logo: "backgrounds/digital-wave" },
+  { id: 5, name: "SiliconVentures", logo: "backgrounds/colorful-dots" }
 ];
 
 const ClientsSection = () => {
@@ -22,7 +22,7 @@ const ClientsSection = () => {
           {clients.map((client) => (
             <div className="client-logo" key={client.id}>
               <img 
-                src={`/images/${client.logo}.png`} 
+                src={`/images/${client.logo}.jpg`} 
                 alt={client.name} 
                 title={client.name}
               />
