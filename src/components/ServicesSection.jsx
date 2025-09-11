@@ -1,30 +1,55 @@
 import React from 'react';
 import './Services.css';
+import { FaMicrochip, FaMemory, FaNetworkWired, FaCogs } from 'react-icons/fa';
 
 const services = [
   {
     id: 1,
-    title: "High-Speed SerDes Solutions",
-    description: "Cutting-edge high-speed serializer/deserializer technology essential for advanced communication systems.",
-    icon: "chip"
+    title: "Analog Front-End",
+    description: "High-precision ADCs, DACs, LDOs, bandgaps, signal chains.",
+    icon: <FaMicrochip size={28} />,
+    details: [
+      "High-performance data converters",
+      "Precision analog circuitry",
+      "Low-noise amplifiers",
+      "Custom sensor interfaces"
+    ]
   },
   {
     id: 2,
-    title: "Power Management ICs",
-    description: "Energy-efficient integrated circuits for optimal power delivery across various applications.",
-    icon: "energy"
+    title: "Custom Memories",
+    description: "Low-power SRAM, register files, ROM, embedded Flash.",
+    icon: <FaMemory size={28} />,
+    details: [
+      "Ultra-low power memories",
+      "Optimized for area and performance",
+      "Custom register file designs",
+      "Non-volatile solutions"
+    ]
   },
   {
     id: 3,
-    title: "Analog-to-Digital Converters",
-    description: "State-of-the-art ADCs and DACs solutions tailored to your specifications.",
-    icon: "convert"
+    title: "Mixed-Signal IP",
+    description: "RF PLLs, SerDes, high-speed I/O, MIPI PHYs, logic.",
+    icon: <FaNetworkWired size={28} />,
+    details: [
+      "High-speed serial interfaces",
+      "Clock generation and distribution",
+      "Mobile interface protocols",
+      "Custom logic solutions"
+    ]
   },
   {
     id: 4,
-    title: "Mixed-Signal Circuit Development",
-    description: "Expert integration of analog signals and digital processes for modern semiconductor solutions.",
-    icon: "circuit"
+    title: "Full-Cycle",
+    description: "Spec → Schematic → Layout → Verification → Tape-Out.",
+    icon: <FaCogs size={28} />,
+    details: [
+      "End-to-end design services",
+      "Design verification & validation",
+      "Physical implementation",
+      "Post-silicon support"
+    ]
   }
 ];
 
@@ -32,17 +57,24 @@ const ServicesSection = () => {
   return (
     <section className="services-section" id="services">
       <div className="container">
-        <h2 className="section-title animate-fade-in">Our Leading Semiconductor Design Services</h2>
-        <p className="section-subtitle animate-fade-in">Expertise that Shapes the Future of Technology</p>
+        <h2 className="section-title">What We Offer</h2>
+        <div className="section-divider"></div>
         
         <div className="services-grid">
           {services.map((service) => (
-            <div className="service-card animate-fade-in" key={service.id}>
+            <div className="service-card" key={service.id}>
               <div className="service-icon">
-                <img src={`/images/${service.icon}.svg`} alt={service.title} />
+                {service.icon}
               </div>
-              <h3>{service.title}</h3>
-              <p>{service.description}</p>
+              <div className="service-content">
+                <h3>{service.title}</h3>
+                <p className="service-description">{service.description}</p>
+                <ul className="service-details">
+                  {service.details.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
           ))}
         </div>
