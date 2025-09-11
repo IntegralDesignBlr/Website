@@ -3,8 +3,13 @@
   padding: 6rem 0;
 }
 
+.section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
 .section-title {
-  text-align: left;
+  text-align: center;
   font-size: 2.2rem;
   color: #333;
   margin-bottom: 1rem;
@@ -15,7 +20,7 @@
   height: 3px;
   width: 60px;
   background: var(--primary);
-  margin-bottom: 3rem;
+  margin: 0 auto 3rem auto;
   border-radius: 2px;
 }
 
@@ -102,11 +107,7 @@
     grid-template-columns: 1fr;
   }
   
-  .section-title {
-    text-align: center;
-  }
-  
-  .section-divider {
-    margin: 0 auto 3rem auto;
+  .services-grid {
+    gap: 1.5rem;
   }
 }
