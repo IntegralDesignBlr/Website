@@ -1,42 +1,117 @@
-import React, { useRef, useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import emailjs from 'emailjs-com';
-import { ReactComponent as ContactIcon } from '../assets/contact.svg';
+import React, { useState } from 'react';
+import './Contact.css';
 
-export default function ContactForm() {
-  const formRef = useRef();
-  const [status, setStatus] = useState('');
+const ContactForm = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
 
-  useEffect(() => { emailjs.init('YOUR_PUBLIC_KEY'); }, []);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value
+    });
+  };
 
-  const sendEmail = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm('YOUR_SERVICE_ID','YOUR_TEMPLATE_ID',formRef.current)
-      .then(
-        () => setStatus("Message sent! We'll reply soon."),
-        () => setStatus('Failed to send. Try again.')
-      );
+    console.log('Form submitted:', formData);
+    // Here you would typically send the data to your backend
+    alert('Thank you for your message! We will get back to you soon.');
+    setFormData({ name: '', email: '', message: '' });
   };
 
   return (
-    <motion.section
-      id="contact"
-      className="section"
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6 }}
-    >
-      <ContactIcon width={48} style={{ marginBottom: '1rem' }} />
-      <h2>Let's Collaborate</h2>
-      <form ref={formRef} onSubmit={sendEmail}>
-        <input type="text"   name="user_name"  placeholder="Your Name" required />
-        <input type="email"  name="user_email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" required />
-        <button type="submit">Send Message</button>
-      </form>
-      {status && <p style={{ marginTop: '1rem', textAlign: 'center' }}>{status}</p>}
-    </motion.section>
+    <section className="contact-section">
+      <div className="container">
+        <div className="contact-wrapper">
+          <div className="contact-info">
+            <h2>Let's Collaborate</h2>
+            <p>
+              Interested in working together? Contact us to discuss how our semiconductor design 
+              expertise can help accelerate your next project.
+            </p>
+            
+            <div className="contact-details">
+              <div className="contact-item">
+                <div className="icon">
+                  <i className="fas fa-map-marker-alt"></i>
+                </div>
+                <div>
+                  <h4>Our Location</h4>
+                  <p>Tech Park, Innovation Drive, CA 94000</p>
+                </div>
+              </div>
+              
+              <div className="contact-item">
+                <div className="icon">
+                  <i className="fas fa-envelope"></i>
+                </div>
+                <div>
+                  <h4>Email Address</h4>
+                  <p>info@integraldesign.com</p>
+                </div>
+              </div>
+              
+              <div className="contact-item">
+                <div className="icon">
+                  <i className="fas fa-phone-alt"></i>
+                </div>
+                <div>
+                  <h4>Phone Number</h4>
+                  <p>+1 (555) 123-4567</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="contact-form-container">
+            <form onSubmit={handleSubmit}>
+              <div className="form-group">
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              
+              <div className="form-group">
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+              
+              <div className="form-group">
+                <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder="Your Message"
+                  rows="6"
+                  required
+                ></textarea>
+              </div>
+              
+              <button type="submit" className="submit-btn">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
   );
-}
+};
+
+export default ContactForm;
