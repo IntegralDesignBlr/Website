@@ -13,7 +13,7 @@ const teamMembers = [
     role: "Founder & CEO",
     expertise: "Analog Design",
     bio: "Former Principal Engineer at Intel with over 15 years of experience in high-speed SerDes design.",
-    image: "/images/team1.jpg"
+    image: "/images/team/team1.jpg"
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const teamMembers = [
     role: "CTO",
     expertise: "Mixed-Signal",
     bio: "Expert in mixed-signal architectures with previous experience at Texas Instruments and Qualcomm.",
-    image: "/images/team2.jpg"
+    image: "/images/team/team2.jpg"
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const teamMembers = [
     role: "Principal Designer",
     expertise: "RF & Wireless",
     bio: "Specialized in RF front-end design with 10+ patents in wireless communication technologies.",
-    image: "/images/team3.jpg"
+    image: "/images/team/team3.jpg"
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ const teamMembers = [
     role: "Lead Engineer",
     expertise: "Digital Integration",
     bio: "RISC-V expert with extensive background in SoC design and hardware verification.",
-    image: "/images/team4.jpg"
+    image: "/images/team/team4.jpg"
   }
 ];
 

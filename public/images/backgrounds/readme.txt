@@ -1,4 +1,5 @@
 Save the abstract fluid image as abstract-fluid.jpg here.
+Save the blue abstract paint image as blue-abstract-paint.jpg here.
 
 Also save these 6 background images:
 - abstract-art-1.jpg (first multi-color abstract)
