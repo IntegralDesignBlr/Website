@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="footer-about">
             <Link to="/" className="footer-logo">
               <img src="/images/logo.png" alt="IntegralDesign" />
-              <span>INTEGRALDESIGN</span>
+              <span>IntegralDesign</span>
             </Link>
             <p>
               Your dedicated partner for high-performance, low-power analog and

@@ -19,7 +19,7 @@ const Navbar = () => {
       <div className="container navbar-container">
         <Link to="/" className="navbar-logo">
           <img src="/images/logo.png" alt="IntegralDesign" />
-          <span>INTEGRALDESIGN</span>
+          <span>IntegralDesign</span>
         </Link>
         
         <div className="navbar-links">
