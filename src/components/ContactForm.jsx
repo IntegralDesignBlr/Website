@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import './Contact.css';
 
 const ContactForm = () => {
@@ -7,6 +8,8 @@ const ContactForm = () => {
     email: '',
     message: ''
   });
+  
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,10 +21,34 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Here you would typically send the data to your backend
-    alert('Thank you for your message! We will get back to you soon.');
-    setFormData({ name: '', email: '', message: '' });
+    setIsSubmitting(true);
+    
+    // EmailJS configuration
+    const serviceID = 'service_7s3tfud';
+    const templateID = 'template_oat6bb1';
+    const publicKey = 'hjUlS1eMDeyl6xBDd';
+    
+    // Template parameters
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      message: formData.message,
+      to_name: 'IntegralDesign Team',
+    };
+    
+    emailjs.send(serviceID, templateID, templateParams, publicKey)
+      .then((response) => {
+        console.log('Email sent successfully:', response.status, response.text);
+        alert('Thank you for your message! We will get back to you soon.');
+        setFormData({ name: '', email: '', message: '' });
+      })
+      .catch((error) => {
+        console.error('Failed to send email:', error);
+        alert('Sorry, there was an error sending your message. Please try again.');
+      })
+      .finally(() => {
+        setIsSubmitting(false);
+      });
   };
 
   return (
@@ -42,7 +69,7 @@ const ContactForm = () => {
                 </div>
                 <div>
                   <h4>Our Location</h4>
-                  <p>Tech Park, Innovation Drive, CA 94000</p>
+                  <p>Tech Park, Electronic City, Bangalore, Karnataka 560100</p>
                 </div>
               </div>
               
@@ -62,7 +89,7 @@ const ContactForm = () => {
                 </div>
                 <div>
                   <h4>Phone Number</h4>
-                  <p>+1 (555) 123-4567</p>
+                  <p>+91 (80) 4567-8901</p>
                 </div>
               </div>
             </div>
@@ -103,8 +130,8 @@ const ContactForm = () => {
                 ></textarea>
               </div>
               
-              <button type="submit" className="submit-btn">
-                Send Message
+              <button type="submit" className="submit-btn" disabled={isSubmitting}>
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
             </form>
           </div>
