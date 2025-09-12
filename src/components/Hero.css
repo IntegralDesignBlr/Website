@@ -179,44 +179,50 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding: 100px 1rem 60px;
+    padding: 120px 1rem 60px;
+    min-height: 100vh;
   }
   
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     line-height: 1.2;
+    margin-bottom: 1rem;
   }
   
   .hero p {
     font-size: 1rem;
-    margin: 1.5rem 0 3rem;
+    margin: 1rem 0 2rem;
+    line-height: 1.5;
   }
   
   .hero-buttons {
     flex-direction: column;
     gap: 1rem;
     width: 100%;
-    max-width: 300px;
+    max-width: 320px;
+    margin: 0 auto;
   }
   
   .hero-buttons .btn {
     width: 100%;
-    padding: 0.8rem 1.5rem;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
   }
   
   .explore-text {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     letter-spacing: 1px;
-    padding-top: 50px;
+    padding-top: 40px;
   }
   
   .explore-button {
     padding: 0.8rem 1.5rem;
-    min-width: 180px;
+    min-width: 200px;
   }
   
   .explore-button span {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   
   .explore-arrow {
@@ -226,27 +232,40 @@
 
 @media (max-width: 480px) {
   .hero {
-    padding: 80px 0.5rem 40px;
+    padding: 100px 0.8rem 40px;
+    min-height: 100vh;
   }
   
   .hero h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    line-height: 1.1;
   }
   
   .hero p {
+    font-size: 0.9rem;
+    margin: 1rem 0 1.5rem;
+    line-height: 1.4;
+  }
+  
+  .hero-buttons {
+    max-width: 280px;
+    gap: 0.8rem;
+  }
+  
+  .hero-buttons .btn {
+    padding: 0.9rem 1.2rem;
     font-size: 0.95rem;
-    margin: 1.5rem 0 3rem;
   }
   
   .explore-text {
     font-size: 1rem;
-    letter-spacing: 1px;
-    padding-top: 40px;
+    letter-spacing: 0.5px;
+    padding-top: 30px;
   }
   
   .explore-button {
-    padding: 0.6rem 1rem;
-    min-width: 160px;
+    padding: 0.7rem 1.2rem;
+    min-width: 180px;
   }
   
   .explore-button span {
@@ -260,21 +279,35 @@
 
 @media (max-width: 320px) {
   .hero {
-    padding: 70px 0.5rem 30px;
+    padding: 90px 0.5rem 30px;
+  }
+  
+  .hero h1 {
+    font-size: 1.5rem;
   }
   
   .hero p {
-    margin: 1rem 0 2.5rem;
+    font-size: 0.85rem;
+    margin: 0.8rem 0 1.2rem;
+  }
+  
+  .hero-buttons {
+    max-width: 250px;
+  }
+  
+  .hero-buttons .btn {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
   }
   
   .explore-text {
     font-size: 0.9rem;
-    padding-top: 30px;
+    padding-top: 25px;
   }
   
   .explore-button {
-    padding: 0.5rem 0.8rem;
-    min-width: 140px;
+    padding: 0.6rem 1rem;
+    min-width: 160px;
   }
   
   .explore-button span {
