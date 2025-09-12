@@ -1,23 +1,32 @@
 import React from 'react';
 import './About.css';
+import { 
+  GiMicrochip, 
+  GiArchitectMask, 
+  GiTeamIdea, 
+  GiTechnoHeart 
+} from 'react-icons/gi';
+import { 
+  MdOutlineEngineering, 
+  MdOutlineRocketLaunch 
+} from 'react-icons/md';
+import { 
+  HiOutlineLightBulb, 
+  HiOutlineChartBarSquare 
+} from 'react-icons/hi2';
 
 const About = () => {
   return (
     <section className="about-section" id="about">
       <div className="container">
         <div className="about-header">
-          <div className="about-icon-container">
-            <div className="about-icon">
-              <i className="fas fa-microchip"></i>
-            </div>
-          </div>
           <h2>Who We Are</h2>
           <div className="section-divider"></div>
         </div>
         
         <div className="about-content">
           <p className="about-intro">
-            INTEGRALDESIGN blends decades of analog & mixed-signal expertise with cutting-edge digital integration. 
+            IntegralDesign blends decades of analog & mixed-signal expertise with cutting-edge digital integration. 
             From Edge-AI SoCs to RISC-V cores, we power industries from industrial automation to healthcare.
             We pioneer high-precision ADCs, low-power LDOs, ML-enhanced front-ends, and turnkey IP delivered 
             with full-cycle semiconductor design.
@@ -27,7 +36,7 @@ const About = () => {
         <div className="about-features">
           <div className="about-feature-card">
             <div className="about-card-icon">
-              <i className="fas fa-history"></i>
+              <MdOutlineEngineering size={40} />
             </div>
             <div className="about-feature-content">
               <h3>Our Experience</h3>
@@ -40,7 +49,7 @@ const About = () => {
             
           <div className="about-feature-card">
             <div className="about-card-icon">
-              <i className="fas fa-lightbulb"></i>
+              <HiOutlineLightBulb size={40} />
             </div>
             <div className="about-feature-content">
               <h3>Our Approach</h3>
@@ -53,7 +62,7 @@ const About = () => {
             
           <div className="about-feature-card">
             <div className="about-card-icon">
-              <i className="fas fa-users"></i>
+              <GiTeamIdea size={40} />
             </div>
             <div className="about-feature-content">
               <h3>Our Team</h3>
@@ -66,7 +75,7 @@ const About = () => {
             
           <div className="about-feature-card">
             <div className="about-card-icon">
-              <i className="fas fa-chart-line"></i>
+              <MdOutlineRocketLaunch size={40} />
             </div>
             <div className="about-feature-content">
               <h3>Our Vision</h3>

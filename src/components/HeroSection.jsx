@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { HiArrowRight } from 'react-icons/hi2';
 import './Hero.css';
 
 const HeroSection = () => {
@@ -22,7 +23,14 @@ const HeroSection = () => {
         </div>
       </div>
       <div className="explore-text">
-        EXPLORE OUR PRODUCTS
+        <Link 
+          to="/services"
+          className="explore-button"
+          aria-label="Explore our services"
+        >
+          <span>EXPLORE OUR SERVICES</span>
+          <HiArrowRight size={24} className="explore-arrow" />
+        </Link>
       </div>
     </section>
   );

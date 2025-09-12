@@ -21,7 +21,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--fg);
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 /* STICKY NAVBAR */
