@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { HiLocationMarker, HiMail, HiPhone } from 'react-icons/hi';
 import './Contact.css';
 
 const ContactForm = () => {
@@ -65,7 +66,7 @@ const ContactForm = () => {
             <div className="contact-details">
               <div className="contact-item">
                 <div className="icon">
-                  <i className="fas fa-map-marker-alt"></i>
+                  <HiLocationMarker size={24} />
                 </div>
                 <div>
                   <h4>Our Location</h4>
@@ -75,7 +76,7 @@ const ContactForm = () => {
               
               <div className="contact-item">
                 <div className="icon">
-                  <i className="fas fa-envelope"></i>
+                  <HiMail size={24} />
                 </div>
                 <div>
                   <h4>Email Address</h4>
@@ -85,7 +86,7 @@ const ContactForm = () => {
               
               <div className="contact-item">
                 <div className="icon">
-                  <i className="fas fa-phone-alt"></i>
+                  <HiPhone size={24} />
                 </div>
                 <div>
                   <h4>Phone Number</h4>

@@ -55,6 +55,14 @@
   align-items: center;
   justify-content: center;
   margin-right: 1rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.contact-item .icon:hover {
+  background-color: rgba(255,255,255,0.2);
+  transform: translateY(-2px);
 }
 
 .contact-item h4 {
