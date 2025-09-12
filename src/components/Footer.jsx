@@ -39,7 +39,7 @@ const Footer = () => {
             <h4>Contact Us</h4>
             <p>Email: info@integraldesign.com</p>
             <p>Phone: +91 (80) 4567-8901</p>
-            <p>Address: Tech Park, Electronic City, Bangalore, Karnataka 560100</p>
+            <p>Address: Bangalore, Karnataka</p>
           </div>
         </div>
 
