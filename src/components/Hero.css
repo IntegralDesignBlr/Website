@@ -7,12 +7,12 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   color: var(--text-light);
   text-align: center;
   overflow: hidden;
-  padding: 80px 0;
+  padding: 120px 0 80px;
 }
 
 .hero::before {
@@ -52,6 +52,11 @@
   position: relative;
   z-index: 2;
   max-width: 800px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero h1 {
@@ -79,17 +84,16 @@
 }
 
 .explore-text {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  margin-top: auto;
+  padding-top: 60px;
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 2px;
   opacity: 0.8;
   animation: pulse 2s infinite;
   text-align: center;
-  z-index: 9999;
+  z-index: 10;
   pointer-events: none;
 }
 
@@ -114,7 +118,7 @@
   text-decoration: none;
   padding: 1rem 2rem;
   border-radius: 8px;
-  z-index: 10000;
+  z-index: 100;
   position: relative;
   pointer-events: auto;
   user-select: none;
@@ -149,17 +153,66 @@
 }
 
 @keyframes pulse {
-  0% { opacity: 0.5; transform: translateX(-50%); }
-  50% { opacity: 1; transform: translateX(-50%) translateY(-5px); }
-  100% { opacity: 0.5; transform: translateX(-50%); }
+  0% { opacity: 0.5; }
+  50% { opacity: 1; transform: translateY(-5px); }
+  100% { opacity: 0.5; }
 }
 
 /* Responsive Design - keeps center positioning */
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+  }
+  
+  .hero-buttons {
+    gap: 1rem;
+  }
+  
+  .explore-text {
+    padding-top: 40px;
+  }
+}
+
 @media (max-width: 768px) {
+  .hero {
+    padding: 100px 1rem 60px;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+    margin: 1.5rem 0 3rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .hero-buttons .btn {
+    width: 100%;
+    padding: 0.8rem 1.5rem;
+  }
+  
   .explore-text {
     font-size: 1.2rem;
     letter-spacing: 1px;
-    bottom: 1.5rem;
+    padding-top: 50px;
+  }
+  
+  .explore-button {
+    padding: 0.8rem 1.5rem;
+    min-width: 180px;
   }
   
   .explore-button span {
@@ -172,10 +225,28 @@
 }
 
 @media (max-width: 480px) {
+  .hero {
+    padding: 80px 0.5rem 40px;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero p {
+    font-size: 0.95rem;
+    margin: 1.5rem 0 3rem;
+  }
+  
   .explore-text {
     font-size: 1rem;
     letter-spacing: 1px;
-    bottom: 1rem;
+    padding-top: 40px;
+  }
+  
+  .explore-button {
+    padding: 0.6rem 1rem;
+    min-width: 160px;
   }
   
   .explore-button span {
@@ -188,9 +259,22 @@
 }
 
 @media (max-width: 320px) {
+  .hero {
+    padding: 70px 0.5rem 30px;
+  }
+  
+  .hero p {
+    margin: 1rem 0 2.5rem;
+  }
+  
   .explore-text {
     font-size: 0.9rem;
-    bottom: 0.8rem;
+    padding-top: 30px;
+  }
+  
+  .explore-button {
+    padding: 0.5rem 0.8rem;
+    min-width: 140px;
   }
   
   .explore-button span {
