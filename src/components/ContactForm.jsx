@@ -70,7 +70,7 @@ const ContactForm = () => {
                 </div>
                 <div>
                   <h4>Our Location</h4>
-                  <p>Tech Park, Electronic City, Bangalore, Karnataka 560100</p>
+                  <p>Bangalore, Karnataka</p>
                 </div>
               </div>
               
