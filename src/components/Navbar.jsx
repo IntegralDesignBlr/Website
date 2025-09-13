@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { HiMenu, HiX } from 'react-icons/hi';
 import './Navbar.css';
 
@@ -7,6 +7,13 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleNavigation = (path) => {
+    navigate(path);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    closeMobileMenu();
+  };
   
   useEffect(() => {
     const handleScroll = () => {
@@ -37,21 +44,21 @@ const Navbar = () => {
         </div>
         
         <div className={`navbar-links ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
-          <Link to="/" className={location.pathname === '/' ? 'active' : ''} onClick={closeMobileMenu}>
+          <button type="button" className={`nav-link ${location.pathname === '/' ? 'active' : ''}`} onClick={() => handleNavigation('/')}>
             Home
-          </Link>
-          <Link to="/services" className={location.pathname === '/services' ? 'active' : ''} onClick={closeMobileMenu}>
+          </button>
+          <button type="button" className={`nav-link ${location.pathname === '/services' ? 'active' : ''}`} onClick={() => handleNavigation('/services')}>
             Services
-          </Link>
-          <Link to="/about" className={location.pathname === '/about' ? 'active' : ''} onClick={closeMobileMenu}>
+          </button>
+          <button type="button" className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`} onClick={() => handleNavigation('/about')}>
             About Us
-          </Link>
-          <Link to="/team" className={location.pathname === '/team' ? 'active' : ''} onClick={closeMobileMenu}>
+          </button>
+          <button type="button" className={`nav-link ${location.pathname === '/team' ? 'active' : ''}`} onClick={() => handleNavigation('/team')}>
             Team
-          </Link>
-          <Link to="/contact" className="btn btn-contact" onClick={closeMobileMenu}>
+          </button>
+          <button type="button" className="btn btn-contact" onClick={() => handleNavigation('/contact')}>
             Contact Us
-          </Link>
+          </button>
         </div>
       </div>
     </nav>

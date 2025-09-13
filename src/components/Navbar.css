@@ -46,20 +46,29 @@
   gap: 2rem;
 }
 
-.navbar-links a {
+.navbar-links a,
+.nav-link {
   color: var(--text-light);
   text-decoration: none;
   font-weight: 500;
   position: relative;
   transition: var(--transition);
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
 }
 
 .navbar-links a:hover, 
-.navbar-links a.active {
+.navbar-links a.active,
+.nav-link:hover,
+.nav-link.active {
   opacity: 0.9;
 }
 
-.navbar-links a.active::after {
+.navbar-links a.active::after,
+.nav-link.active::after {
   content: '';
   position: absolute;
   bottom: -5px;

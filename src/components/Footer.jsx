@@ -1,8 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Footer.css";
 
 const Footer = () => {
+  const navigate = useNavigate();
+
+  const handleNavigation = (path) => {
+    navigate(path);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <footer className="footer">
       <div className="container">
@@ -20,19 +27,19 @@ const Footer = () => {
 
           <div className="footer-links">
             <h4>Quick Links</h4>
-            <Link to="/">Home</Link>
-            <Link to="/services">Services</Link>
-            <Link to="/about">About Us</Link>
-            <Link to="/team">Our Team</Link>
-            <Link to="/contact">Contact</Link>
+            <button type="button" onClick={() => handleNavigation('/')} className="footer-link">Home</button>
+            <button type="button" onClick={() => handleNavigation('/services')} className="footer-link">Services</button>
+            <button type="button" onClick={() => handleNavigation('/about')} className="footer-link">About Us</button>
+            <button type="button" onClick={() => handleNavigation('/team')} className="footer-link">Our Team</button>
+            <button type="button" onClick={() => handleNavigation('/contact')} className="footer-link">Contact</button>
           </div>
 
           <div className="footer-services">
             <h4>Our Services</h4>
-            <Link to="/services">High-Speed SerDes</Link>
-            <Link to="/services">Power Management ICs</Link>
-            <Link to="/services">Data Converters</Link>
-            <Link to="/services">Mixed-Signal Circuits</Link>
+            <button type="button" onClick={() => handleNavigation('/services')} className="footer-link">High-Speed SerDes</button>
+            <button type="button" onClick={() => handleNavigation('/services')} className="footer-link">Power Management ICs</button>
+            <button type="button" onClick={() => handleNavigation('/services')} className="footer-link">Data Converters</button>
+            <button type="button" onClick={() => handleNavigation('/services')} className="footer-link">Mixed-Signal Circuits</button>
           </div>
 
           <div className="footer-contact">

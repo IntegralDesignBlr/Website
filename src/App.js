@@ -8,10 +8,12 @@ import AboutPage from './pages/AboutPage';
 import TeamPage from './pages/TeamPage';
 import ContactPage from './pages/ContactPage';
 import NotFoundPage from './pages/NotFoundPage';
+import ScrollToTop from './utils/ScrollToTop';
 
 function App() {
   return (
     <>
+      <ScrollToTop />
       <Navbar />
       <main>
         <Routes>

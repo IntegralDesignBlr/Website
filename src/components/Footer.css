@@ -60,7 +60,8 @@
 }
 
 .footer-links a, 
-.footer-services a {
+.footer-services a,
+.footer-link {
   color: var(--text-light);
   text-decoration: none;
   margin-bottom: 0.8rem;
@@ -70,10 +71,17 @@
   display: block;
   position: relative;
   cursor: pointer;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  text-align: left;
+  width: 100%;
 }
 
 .footer-links a:hover, 
-.footer-services a:hover {
+.footer-services a:hover,
+.footer-link:hover {
   opacity: 1;
   transform: translateX(5px);
 }
