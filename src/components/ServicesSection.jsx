@@ -1,54 +1,56 @@
 import React from 'react';
 import './Services.css';
-import { FaMicrochip, FaMemory, FaNetworkWired, FaCogs } from 'react-icons/fa';
+import { FaBrain, FaAtom, FaMicrochip, FaMemory } from 'react-icons/fa';
+import { GiProcessor, GiArtificialIntelligence } from 'react-icons/gi';
+import { MdPrecisionManufacturing } from 'react-icons/md';
 
 const services = [
   {
     id: 1,
-    title: "Analog Front-End",
-    description: "High-precision ADCs, DACs, LDOs, bandgaps, signal chains.",
-    icon: <FaMicrochip size={28} />,
+    title: "AI & ML",
+    description: "Artificial Intelligence & Machine Learning solutions for next-gen applications.",
+    icon: <GiArtificialIntelligence size={32} />,
     details: [
-      "High-performance data converters",
-      "Precision analog circuitry",
-      "Low-noise amplifiers",
-      "Custom sensor interfaces"
+      "Foundation Models (LLMs, Vision Transformers)",
+      "Neural Architecture Search (NAS)",
+      "Edge & Federated Learning",
+      "Ethical & Explainable AI"
     ]
   },
   {
     id: 2,
-    title: "Custom Memories",
-    description: "Low-power SRAM, register files, ROM, embedded Flash.",
-    icon: <FaMemory size={28} />,
+    title: "Quantum Computing",
+    description: "Hybrid quantum-classical systems and fault-tolerant computation research.",
+    icon: <FaAtom size={28} />,
     details: [
-      "Ultra-low power memories",
-      "Optimized for area and performance",
-      "Custom register file designs",
-      "Non-volatile solutions"
+      "Qubit Architectures (Superconducting, Ion Trap)",
+      "Quantum Error Correction",
+      "Quantum Compiler Development",
+      "Simulation of Quantum Circuits"
     ]
   },
   {
     id: 3,
-    title: "Mixed-Signal IP",
-    description: "RF PLLs, SerDes, high-speed I/O, MIPI PHYs, logic.",
-    icon: <FaNetworkWired size={28} />,
+    title: "RISC-V",
+    description: "Open and secure compute cores tailored for AI, edge, and secure applications.",
+    icon: <GiProcessor size={30} />,
     details: [
-      "High-speed serial interfaces",
-      "Clock generation and distribution",
-      "Mobile interface protocols",
-      "Custom logic solutions"
+      "Custom ISA Extensions for ML Workloads",
+      "Secure Boot and Isolation Techniques",
+      "Microarchitecture Design and RTL",
+      "Integration with AI accelerators"
     ]
   },
   {
     id: 4,
-    title: "Full-Cycle",
-    description: "Spec → Schematic → Layout → Verification → Tape-Out.",
-    icon: <FaCogs size={28} />,
+    title: "Semiconductors",
+    description: "Custom silicon, analog design, and memory architecture innovation.",
+    icon: <MdPrecisionManufacturing size={30} />,
     details: [
-      "End-to-end design services",
-      "Design verification & validation",
-      "Physical implementation",
-      "Post-silicon support"
+      "Analog Design: ADC/DACs, amplifiers",
+      "SRAM Design: Low-power memory cells",
+      "Physical Design: Floorplanning, P&R",
+      "EDA Toolchains: OpenROAD, Synopsys"
     ]
   }
 ];

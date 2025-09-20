@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { HiMenu, HiX } from 'react-icons/hi';
+import { HiMenu, HiX, HiChevronDown } from 'react-icons/hi';
 import './Navbar.css';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -13,6 +14,7 @@ const Navbar = () => {
     navigate(path);
     window.scrollTo({ top: 0, behavior: 'smooth' });
     closeMobileMenu();
+    setIsServicesDropdownOpen(false);
   };
   
   useEffect(() => {
@@ -25,11 +27,31 @@ const Navbar = () => {
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+    setIsServicesDropdownOpen(false);
   };
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
+    setIsServicesDropdownOpen(false);
   };
+
+  const toggleServicesDropdown = () => {
+    setIsServicesDropdownOpen(!isServicesDropdownOpen);
+  };
+
+  const handleServicesClick = (e) => {
+    e.preventDefault();
+    toggleServicesDropdown();
+  };
+
+  const serviceItems = [
+    { path: '/services/ai-ml', label: 'AI & ML', description: 'Artificial Intelligence & Machine Learning' },
+    { path: '/services/quantum', label: 'Quantum Computing', description: 'Quantum systems and computation' },
+    { path: '/services/risc-v', label: 'RISC-V', description: 'RISC-V Architecture' },
+    { path: '/services/semiconductors', label: 'Semiconductors', description: 'Semiconductors & Chip Design' }
+  ];
+
+  const isServicesActive = location.pathname.startsWith('/services');
   
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
@@ -47,9 +69,51 @@ const Navbar = () => {
           <button type="button" className={`nav-link ${location.pathname === '/' ? 'active' : ''}`} onClick={() => handleNavigation('/')}>
             Home
           </button>
-          <button type="button" className={`nav-link ${location.pathname === '/services' ? 'active' : ''}`} onClick={() => handleNavigation('/services')}>
-            Services
-          </button>
+          
+          <div className="services-dropdown">
+            <button 
+              type="button" 
+              className={`nav-link services-trigger ${isServicesActive ? 'active' : ''}`} 
+              onClick={handleServicesClick}
+              onMouseEnter={() => !isMobileMenuOpen && setIsServicesDropdownOpen(true)}
+              onMouseLeave={() => !isMobileMenuOpen && setIsServicesDropdownOpen(false)}
+            >
+              Services
+              <HiChevronDown className={`dropdown-arrow ${isServicesDropdownOpen ? 'rotated' : ''}`} />
+            </button>
+            
+            <div 
+              className={`services-dropdown-menu ${isServicesDropdownOpen ? 'show' : ''}`}
+              onMouseEnter={() => !isMobileMenuOpen && setIsServicesDropdownOpen(true)}
+              onMouseLeave={() => !isMobileMenuOpen && setIsServicesDropdownOpen(false)}
+            >
+              {serviceItems.map((service, index) => (
+                <button
+                  key={index}
+                  type="button"
+                  className={`dropdown-item ${location.pathname === service.path ? 'active' : ''}`}
+                  onClick={() => handleNavigation(service.path)}
+                >
+                  <div className="dropdown-item-content">
+                    <span className="dropdown-item-title">{service.label}</span>
+                    <span className="dropdown-item-description">{service.description}</span>
+                  </div>
+                </button>
+              ))}
+              <div className="dropdown-divider"></div>
+              <button
+                type="button"
+                className={`dropdown-item ${location.pathname === '/services' ? 'active' : ''}`}
+                onClick={() => handleNavigation('/services')}
+              >
+                <div className="dropdown-item-content">
+                  <span className="dropdown-item-title">All Services</span>
+                  <span className="dropdown-item-description">View all our services</span>
+                </div>
+              </button>
+            </div>
+          </div>
+          
           <button type="button" className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`} onClick={() => handleNavigation('/about')}>
             About Us
           </button>

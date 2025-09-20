@@ -3,6 +3,163 @@
   padding: 6rem 0;
 }
 
+/* Service Page Styles */
+.service-page {
+  background-color: white;
+  min-height: calc(100vh - 80px);
+  padding-top: 80px;
+  padding-bottom: 0;
+  margin: 0;
+}
+
+.service-page .container {
+  padding: 0;
+  margin: 0;
+}
+
+/* Service Title Section - Similar to About Us "Who We Are" */
+.service-title-section {
+  text-align: center;
+  padding: 2.5rem 0 1.5rem;
+  background-color: #f8f9fa;
+}
+
+.service-title-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.service-title-icon {
+  color: var(--primary);
+  margin-bottom: 0.8rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.service-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.8rem;
+  line-height: 1.2;
+}
+
+.service-title-underline {
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  margin: 0 auto 1.2rem;
+  border-radius: 2px;
+}
+
+.service-description {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  line-height: 1.6;
+  margin-bottom: 0;
+  opacity: 0.8;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.service-header {
+  text-align: center;
+  margin: 0;
+  padding: 1rem 0;
+  background: linear-gradient(135deg, var(--primary-light), var(--primary));
+  color: var(--text-light);
+  border-radius: 0;
+}
+
+.service-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.service-header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.service-content {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.service-section {
+  margin-bottom: 1.5rem;
+  padding: 1.8rem 2rem;
+  background: var(--bg-light);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  border: 1px solid rgba(45, 183, 157, 0.1);
+}
+
+.service-section h2 {
+  color: var(--primary-dark);
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  position: relative;
+  padding-bottom: 0.4rem;
+}
+
+.service-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(to right, var(--primary), var(--accent));
+  border-radius: 2px;
+}
+
+.service-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-section li {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid rgba(45, 183, 157, 0.1);
+  font-size: 1rem;
+  color: var(--text-primary);
+  position: relative;
+  padding-left: 1.2rem;
+  line-height: 1.5;
+}
+
+.service-section li:last-child {
+  border-bottom: none;
+}
+
+.service-section li::before {
+  content: '▶';
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-size: 0.7rem;
+  top: 0.7rem;
+}
+
+.service-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
 .section-header {
   text-align: center;
   margin-bottom: 2rem;
@@ -105,9 +262,54 @@
 @media (max-width: 768px) {
   .services-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
   
-  .services-grid {
-    gap: 1.5rem;
+  /* Mobile Service Page Styles */
+  .service-page {
+    padding-top: 80px;
+    margin: 0;
+  }
+  
+  .service-title-section {
+    padding: 2rem 0 1rem;
+  }
+  
+  .service-title {
+    font-size: 2.2rem;
+  }
+  
+  .service-title-icon {
+    margin-bottom: 0.6rem;
+  }
+  
+  .service-description {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .service-content {
+    margin: 1.5rem auto;
+    padding: 0 0.8rem;
+  }
+  
+  .service-section {
+    margin-bottom: 1.2rem;
+    padding: 1.2rem 1rem;
+  }
+  
+  .service-section h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  
+  .service-section li {
+    font-size: 0.95rem;
+    padding: 0.5rem 0;
+    padding-left: 1rem;
+  }
+  
+  .service-section p {
+    font-size: 0.95rem;
   }
 }

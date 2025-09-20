@@ -26,10 +26,7 @@ const About = () => {
         
         <div className="about-content">
           <p className="about-intro">
-            IntegralDesign blends decades of analog & mixed-signal expertise with cutting-edge digital integration. 
-            From Edge-AI SoCs to RISC-V cores, we power industries from industrial automation to healthcare.
-            We pioneer high-precision ADCs, low-power LDOs, ML-enhanced front-ends, and turnkey IP delivered 
-            with full-cycle semiconductor design.
+            Integral Design is a deep-tech R&D powerhouse, fusing theoretical science with systems engineering. We design future-ready solutions in AI, ML, Quantum Computing, Secure Semiconductors, and more. Our mission: solve the unsolved — responsibly and scalably.
           </p>
         </div>
           
