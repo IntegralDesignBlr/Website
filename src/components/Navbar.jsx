@@ -21,18 +21,42 @@ const Navbar = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
+    
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        setIsMobileMenuOpen(false);
+        setIsServicesDropdownOpen(false);
+        document.body.classList.remove('mobile-menu-open');
+      }
+    };
+    
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+      document.body.classList.remove('mobile-menu-open');
+    };
   }, []);
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
+    const newState = !isMobileMenuOpen;
+    setIsMobileMenuOpen(newState);
     setIsServicesDropdownOpen(false);
+    
+    // Prevent body scroll when mobile menu is open
+    if (newState) {
+      document.body.classList.add('mobile-menu-open');
+    } else {
+      document.body.classList.remove('mobile-menu-open');
+    }
   };
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
     setIsServicesDropdownOpen(false);
+    document.body.classList.remove('mobile-menu-open');
   };
 
   const toggleServicesDropdown = () => {
