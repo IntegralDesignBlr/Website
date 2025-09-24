@@ -29,7 +29,7 @@ const HeroSection = () => {
           <Link to="/services" className="btn btn-outline">Our Services</Link>
         </div> */}
       </div>
-      <div className="explore-text">
+      {/* <div className="explore-text">
         <button 
           onClick={handleExploreClick}
           className="explore-button"
@@ -38,7 +38,7 @@ const HeroSection = () => {
           <span>EXPLORE OUR SERVICES</span>
           <HiArrowRight size={24} className="explore-arrow" />
         </button>
-      </div>
+      </div> */}
     </section>
   );
 };

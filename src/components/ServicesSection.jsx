@@ -47,15 +47,15 @@ const services = [
   },
   {
     id: 4,
-    title: "VLSI",
-    description: "Custom silicon, analog design, and memory architecture innovation.",
+    title: "Memories Design",
+    description: "Advanced memory architectures and high-performance storage solutions.",
     icon: <MdPrecisionManufacturing size={30} />,
     path: "/services/semiconductors",
     details: [
-      "Analog Design: ADC/DACs, amplifiers",
       "SRAM Design: Low-power memory cells",
-      "Physical Design: Floorplanning, P&R",
-      "EDA Toolchains: OpenROAD, Synopsys"
+      "Flash Memory Architecture",
+      "Memory Controller Design",
+      "High-Speed Memory Interfaces"
     ]
   }
 ];

@@ -29,6 +29,7 @@ const Footer = () => {
             <h4>Quick Links</h4>
             <button type="button" onClick={() => handleNavigation('/')} className="footer-link">Home</button>
             <button type="button" onClick={() => handleNavigation('/services')} className="footer-link">Services</button>
+            <button type="button" onClick={() => handleNavigation('/career')} className="footer-link">Career</button>
             {/* <button type="button" onClick={() => handleNavigation('/about')} className="footer-link">About Us</button> */}
             {/* <button type="button" onClick={() => handleNavigation('/team')} className="footer-link">Our Team</button> */}
             {/* <button type="button" onClick={() => handleNavigation('/contact')} className="footer-link">Contact</button> */}

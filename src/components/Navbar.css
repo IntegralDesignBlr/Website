@@ -240,7 +240,7 @@
     justify-content: flex-start;
     align-items: stretch;
     gap: 0;
-    padding: 0;
+    padding: 1rem;
     transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
     overflow-y: auto;
@@ -261,13 +261,12 @@
     text-align: left;
     border-radius: 8px;
     transition: background-color 0.3s ease;
-    margin: 0.5rem 1rem;
+    margin: 0.5rem 0;
     background: none;
     border: none;
     color: var(--text-light);
     cursor: pointer;
     box-sizing: border-box;
-    max-width: calc(100% - 2rem);
   }
   
   .navbar-links .nav-link:hover,
@@ -287,12 +286,10 @@
   
   /* Mobile Services Dropdown */
   .services-dropdown {
-    width: calc(100% - 2rem);
+    width: 100%;
     position: relative;
-    margin: 0.5rem 1rem;
-    overflow: hidden;
+    margin: 0.5rem 0;
     box-sizing: border-box;
-    padding: 0;
   }
   
   .services-trigger {
@@ -305,16 +302,22 @@
     display: flex;
     align-items: center;
     box-sizing: border-box;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.1rem;
+    cursor: pointer;
   }
   
   .services-trigger:hover,
   .services-trigger:focus {
     background-color: rgba(255, 255, 255, 0.15);
+    outline: none;
   }
   
   .dropdown-arrow {
     margin-left: auto;
     transition: transform 0.3s ease;
+    flex-shrink: 0;
   }
   
   .dropdown-arrow.rotated {
@@ -322,49 +325,41 @@
   }
   
   .services-dropdown-menu {
-    position: static;
-    display: block;
     width: 100%;
-    max-width: 100%;
     margin: 0.5rem 0 0 0;
     padding: 0;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
-    overflow: hidden;
-    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.1);
     box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
   }
   
   .services-dropdown-menu.show {
-    display: block;
-    animation: mobileSlideDown 0.3s ease-out;
+    max-height: 400px;
+    overflow: visible;
   }
   
   .services-dropdown-menu:not(.show) {
-    display: none;
-  }
-  
-  @keyframes mobileSlideDown {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-      max-height: 0;
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-      max-height: 500px;
-    }
+    max-height: 0;
+    overflow: hidden;
   }
   
   .dropdown-item {
     width: 100%;
     padding: 0;
     margin: 0;
-    background: none;
+    background: transparent;
     border: none;
     cursor: pointer;
+    display: block;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .dropdown-item:last-child {
+    border-bottom: none;
   }
   
   .dropdown-item-content {
@@ -373,7 +368,6 @@
     text-align: left;
     display: block;
     box-sizing: border-box;
-    overflow: hidden;
   }
   
   .dropdown-item-title {

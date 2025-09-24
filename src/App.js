@@ -8,6 +8,7 @@ import AIMLPage from './pages/AIMLPage';
 import QuantumPage from './pages/QuantumPage';
 import RISCVPage from './pages/RISCVPage';
 import SemiconductorsPage from './pages/SemiconductorsPage';
+import CareerPage from './pages/CareerPage';
 // import AboutPage from './pages/AboutPage';
 // import TeamPage from './pages/TeamPage';
 // import ContactPage from './pages/ContactPage';
@@ -27,6 +28,7 @@ function App() {
           <Route path="/services/quantum" element={<QuantumPage />} />
           <Route path="/services/risc-v" element={<RISCVPage />} />
           <Route path="/services/semiconductors" element={<SemiconductorsPage />} />
+          <Route path="/career" element={<CareerPage />} />
           {/* <Route path="/about" element={<AboutPage />} /> */}
           {/* <Route path="/team" element={<TeamPage />} /> */}
           {/* <Route path="/contact" element={<ContactPage />} /> */}

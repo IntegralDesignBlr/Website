@@ -9,7 +9,7 @@ const SemiconductorsPage = () => {
         <section className="service-title-section">
           <div className="service-title-content">
             <MdPrecisionManufacturing className="service-title-icon" size={60} />
-            <h1 className="service-title">VLSI</h1>
+            <h1 className="service-title">Memories Design</h1>
             <div className="service-title-underline"></div>
             <p className="service-description">
               Custom silicon design, analog circuits, and memory architecture innovation for next-generation computing.

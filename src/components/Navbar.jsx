@@ -158,6 +158,9 @@ const Navbar = () => {
           {/* <button type="button" className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`} onClick={() => handleNavigation('/about')}>
             About Us
           </button> */}
+          <button type="button" className={`nav-link ${location.pathname === '/career' ? 'active' : ''}`} onClick={() => handleNavigation('/career')}>
+            Career
+          </button>
           {/* <button type="button" className={`nav-link ${location.pathname === '/team' ? 'active' : ''}`} onClick={() => handleNavigation('/team')}>
             Team
           </button> */}
