@@ -9,7 +9,7 @@ const RISCVPage = () => {
         <section className="service-title-section">
           <div className="service-title-content">
             <GiProcessor className="service-title-icon" size={60} />
-            <h1 className="service-title">RISC-V Architecture</h1>
+            <h1 className="service-title">Analog And Mixed Signal Design</h1>
             <div className="service-title-underline"></div>
             <p className="service-description">
               Open and secure compute cores tailored for AI, edge, and secure applications with cutting-edge architecture.

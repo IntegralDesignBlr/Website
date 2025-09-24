@@ -8,9 +8,9 @@ import AIMLPage from './pages/AIMLPage';
 import QuantumPage from './pages/QuantumPage';
 import RISCVPage from './pages/RISCVPage';
 import SemiconductorsPage from './pages/SemiconductorsPage';
-import AboutPage from './pages/AboutPage';
-import TeamPage from './pages/TeamPage';
-import ContactPage from './pages/ContactPage';
+// import AboutPage from './pages/AboutPage';
+// import TeamPage from './pages/TeamPage';
+// import ContactPage from './pages/ContactPage';
 import NotFoundPage from './pages/NotFoundPage';
 import ScrollToTop from './utils/ScrollToTop';
 
@@ -27,9 +27,9 @@ function App() {
           <Route path="/services/quantum" element={<QuantumPage />} />
           <Route path="/services/risc-v" element={<RISCVPage />} />
           <Route path="/services/semiconductors" element={<SemiconductorsPage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/team" element={<TeamPage />} />
-          <Route path="/contact" element={<ContactPage />} />
+          {/* <Route path="/about" element={<AboutPage />} /> */}
+          {/* <Route path="/team" element={<TeamPage />} /> */}
+          {/* <Route path="/contact" element={<ContactPage />} /> */}
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>

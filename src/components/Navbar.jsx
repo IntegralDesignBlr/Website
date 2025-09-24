@@ -16,6 +16,26 @@ const Navbar = () => {
     closeMobileMenu();
     setIsServicesDropdownOpen(false);
   };
+
+  const handleServicesNavigation = (path) => {
+    // Always navigate to the specific service page
+    handleNavigation(path);
+  };
+
+  const handleAllServicesClick = () => {
+    if (location.pathname === '/') {
+      // If on homepage, scroll to services section
+      const servicesSection = document.getElementById('services');
+      if (servicesSection) {
+        servicesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      closeMobileMenu();
+      setIsServicesDropdownOpen(false);
+    } else {
+      // If not on homepage, navigate to services page
+      handleNavigation('/services');
+    }
+  };
   
   useEffect(() => {
     const handleScroll = () => {
@@ -65,14 +85,15 @@ const Navbar = () => {
 
   const handleServicesClick = (e) => {
     e.preventDefault();
+    // Simply toggle the dropdown
     toggleServicesDropdown();
   };
 
   const serviceItems = [
-    { path: '/services/ai-ml', label: 'AI & ML', description: 'Artificial Intelligence & Machine Learning' },
-    { path: '/services/quantum', label: 'Quantum Computing', description: 'Quantum systems and computation' },
-    { path: '/services/risc-v', label: 'RISC-V', description: 'RISC-V Architecture' },
-    { path: '/services/semiconductors', label: 'Semiconductors', description: 'Semiconductors & Chip Design' }
+    { path: '/services/risc-v', label: 'Analog and Mixed signal design', description: 'Analog & Mixed Signal Circuit Design' },
+    { path: '/services/semiconductors', label: 'Memories design', description: 'Memory Architecture & Design' },
+    { path: '/services/ai-ml', label: 'AI ML', description: 'Artificial Intelligence & Machine Learning' },
+    { path: '/services/quantum', label: 'Quantum computing', description: 'Quantum systems and computation' }
   ];
 
   const isServicesActive = location.pathname.startsWith('/services');
@@ -99,8 +120,6 @@ const Navbar = () => {
               type="button" 
               className={`nav-link services-trigger ${isServicesActive ? 'active' : ''}`} 
               onClick={handleServicesClick}
-              onMouseEnter={() => !isMobileMenuOpen && setIsServicesDropdownOpen(true)}
-              onMouseLeave={() => !isMobileMenuOpen && setIsServicesDropdownOpen(false)}
             >
               Services
               <HiChevronDown className={`dropdown-arrow ${isServicesDropdownOpen ? 'rotated' : ''}`} />
@@ -108,15 +127,13 @@ const Navbar = () => {
             
             <div 
               className={`services-dropdown-menu ${isServicesDropdownOpen ? 'show' : ''}`}
-              onMouseEnter={() => !isMobileMenuOpen && setIsServicesDropdownOpen(true)}
-              onMouseLeave={() => !isMobileMenuOpen && setIsServicesDropdownOpen(false)}
             >
               {serviceItems.map((service, index) => (
                 <button
                   key={index}
                   type="button"
                   className={`dropdown-item ${location.pathname === service.path ? 'active' : ''}`}
-                  onClick={() => handleNavigation(service.path)}
+                  onClick={() => handleServicesNavigation(service.path)}
                 >
                   <div className="dropdown-item-content">
                     <span className="dropdown-item-title">{service.label}</span>
@@ -124,29 +141,29 @@ const Navbar = () => {
                   </div>
                 </button>
               ))}
-              <div className="dropdown-divider"></div>
+              {/* <div className="dropdown-divider"></div>
               <button
                 type="button"
                 className={`dropdown-item ${location.pathname === '/services' ? 'active' : ''}`}
-                onClick={() => handleNavigation('/services')}
+                onClick={handleAllServicesClick}
               >
                 <div className="dropdown-item-content">
-                  <span className="dropdown-item-title">All Services</span>
-                  <span className="dropdown-item-description">View all our services</span>
+                  <span className="dropdown-item-title">Explore Our Services</span>
+                  <span className="dropdown-item-description">View all our services on homepage</span>
                 </div>
-              </button>
+              </button> */}
             </div>
           </div>
           
-          <button type="button" className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`} onClick={() => handleNavigation('/about')}>
+          {/* <button type="button" className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`} onClick={() => handleNavigation('/about')}>
             About Us
-          </button>
-          <button type="button" className={`nav-link ${location.pathname === '/team' ? 'active' : ''}`} onClick={() => handleNavigation('/team')}>
+          </button> */}
+          {/* <button type="button" className={`nav-link ${location.pathname === '/team' ? 'active' : ''}`} onClick={() => handleNavigation('/team')}>
             Team
-          </button>
-          <button type="button" className="btn btn-contact" onClick={() => handleNavigation('/contact')}>
+          </button> */}
+          {/* <button type="button" className="btn btn-contact" onClick={() => handleNavigation('/contact')}>
             Contact Us
-          </button>
+          </button> */}
         </div>
       </div>
     </nav>

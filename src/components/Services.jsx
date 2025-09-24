@@ -12,7 +12,7 @@ const servicesList = [
 export default function Services() {
   return (
     <section id="services" className="section">
-      <h2>What We Offer</h2>
+      <h2>Key Pillars</h2>
       <div className="services-grid">
         {servicesList.map((svc, i) => (
           <Service key={i} icon={svc.icon} title={svc.title} text={svc.text} />

@@ -31,19 +31,19 @@ const services = [
   },
   {
     id: 3,
-    title: "RISC-V",
-    description: "Open and secure compute cores tailored for AI, edge, and secure applications.",
+    title: "Analog and Mixed signal design",
+    description: "High-precision analog and mixed-signal circuits for advanced applications.",
     icon: <GiProcessor size={30} />,
     details: [
-      "Custom ISA Extensions for ML Workloads",
-      "Secure Boot and Isolation Techniques",
-      "Microarchitecture Design and RTL",
-      "Integration with AI accelerators"
+      "ADC/DAC Design and Optimization",
+      "Low-Power Analog Circuit Design",
+      "Mixed-Signal System Integration",
+      "High-Speed Interface Design"
     ]
   },
   {
     id: 4,
-    title: "Semiconductors",
+    title: "VLSI",
     description: "Custom silicon, analog design, and memory architecture innovation.",
     icon: <MdPrecisionManufacturing size={30} />,
     details: [
@@ -60,7 +60,7 @@ const ServicesSection = () => {
     <section className="services-section" id="services">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">What We Offer</h2>
+          <h2 className="section-title">Key Pillars</h2>
           <div className="section-divider"></div>
         </div>
         

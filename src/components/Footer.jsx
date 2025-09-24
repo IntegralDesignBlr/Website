@@ -29,25 +29,25 @@ const Footer = () => {
             <h4>Quick Links</h4>
             <button type="button" onClick={() => handleNavigation('/')} className="footer-link">Home</button>
             <button type="button" onClick={() => handleNavigation('/services')} className="footer-link">Services</button>
-            <button type="button" onClick={() => handleNavigation('/about')} className="footer-link">About Us</button>
-            <button type="button" onClick={() => handleNavigation('/team')} className="footer-link">Our Team</button>
-            <button type="button" onClick={() => handleNavigation('/contact')} className="footer-link">Contact</button>
+            {/* <button type="button" onClick={() => handleNavigation('/about')} className="footer-link">About Us</button> */}
+            {/* <button type="button" onClick={() => handleNavigation('/team')} className="footer-link">Our Team</button> */}
+            {/* <button type="button" onClick={() => handleNavigation('/contact')} className="footer-link">Contact</button> */}
           </div>
 
           <div className="footer-services">
             <h4>Our Services</h4>
-            <button type="button" onClick={() => handleNavigation('/services/ai-ml')} className="footer-link">AI & Machine Learning</button>
-            <button type="button" onClick={() => handleNavigation('/services/quantum')} className="footer-link">Quantum Computing</button>
-            <button type="button" onClick={() => handleNavigation('/services/risc-v')} className="footer-link">RISC-V Architecture</button>
-            <button type="button" onClick={() => handleNavigation('/services/semiconductors')} className="footer-link">Semiconductors</button>
+            <button type="button" onClick={() => handleNavigation('/services/risc-v')} className="footer-link">Analog and Mixed signal design</button>
+            <button type="button" onClick={() => handleNavigation('/services/semiconductors')} className="footer-link">Memories design</button>
+            <button type="button" onClick={() => handleNavigation('/services/ai-ml')} className="footer-link">AI ML</button>
+            <button type="button" onClick={() => handleNavigation('/services/quantum')} className="footer-link">Quantum computing</button>
           </div>
 
-          <div className="footer-contact">
+          {/* <div className="footer-contact">
             <h4>Contact Us</h4>
             <p>Email: info@integraldesign.com</p>
             <p>Phone: +91 (80) 4567-8901</p>
             <p>Address: Bangalore, Karnataka</p>
-          </div>
+          </div> */}
         </div>
 
         <div className="footer-bottom">

@@ -9,7 +9,7 @@ const SemiconductorsPage = () => {
         <section className="service-title-section">
           <div className="service-title-content">
             <MdPrecisionManufacturing className="service-title-icon" size={60} />
-            <h1 className="service-title">Semiconductors</h1>
+            <h1 className="service-title">VLSI</h1>
             <div className="service-title-underline"></div>
             <p className="service-description">
               Custom silicon design, analog circuits, and memory architecture innovation for next-generation computing.
@@ -19,9 +19,9 @@ const SemiconductorsPage = () => {
 
         <main className="service-content">
           <section className="service-section">
-            <h2>Domains</h2>
+            <h2>Services</h2>
             <ul>
-              <li><strong>Analog Design:</strong> High-performance ADC/DACs, amplifiers, signal conditioning</li>
+              <li><strong>Decision Analog Design:</strong> High-performance ADC/DACs, amplifiers, signal conditioning</li>
               <li><strong>SRAM Design:</strong> Low-power SRAM cells, custom cache hierarchies, process-aware optimization</li>
               <li><strong>Physical Design:</strong> Floorplanning, P&R, DRC/LVS verification</li>
               <li><strong>EDA Toolchains:</strong> OpenROAD, Synopsys, Cadence integrations</li>
