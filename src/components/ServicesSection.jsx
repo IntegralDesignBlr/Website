@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Services.css';
 import { FaBrain, FaAtom, FaMicrochip, FaMemory } from 'react-icons/fa';
 import { GiProcessor, GiArtificialIntelligence } from 'react-icons/gi';
@@ -10,6 +11,7 @@ const services = [
     title: "AI & ML",
     description: "Artificial Intelligence & Machine Learning solutions for next-gen applications.",
     icon: <GiArtificialIntelligence size={32} />,
+    path: "/services/ai-ml",
     details: [
       "Foundation Models (LLMs, Vision Transformers)",
       "Neural Architecture Search (NAS)",
@@ -22,6 +24,7 @@ const services = [
     title: "Quantum Computing",
     description: "Hybrid quantum-classical systems and fault-tolerant computation research.",
     icon: <FaAtom size={28} />,
+    path: "/services/quantum",
     details: [
       "Qubit Architectures (Superconducting, Ion Trap)",
       "Quantum Error Correction",
@@ -34,6 +37,7 @@ const services = [
     title: "Analog and Mixed signal design",
     description: "High-precision analog and mixed-signal circuits for advanced applications.",
     icon: <GiProcessor size={30} />,
+    path: "/services/risc-v",
     details: [
       "ADC/DAC Design and Optimization",
       "Low-Power Analog Circuit Design",
@@ -46,6 +50,7 @@ const services = [
     title: "VLSI",
     description: "Custom silicon, analog design, and memory architecture innovation.",
     icon: <MdPrecisionManufacturing size={30} />,
+    path: "/services/semiconductors",
     details: [
       "Analog Design: ADC/DACs, amplifiers",
       "SRAM Design: Low-power memory cells",
@@ -56,6 +61,13 @@ const services = [
 ];
 
 const ServicesSection = () => {
+  const navigate = useNavigate();
+
+  const handleServiceClick = (path) => {
+    navigate(path);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <section className="services-section" id="services">
       <div className="container">
@@ -66,18 +78,18 @@ const ServicesSection = () => {
         
         <div className="services-grid">
           {services.map((service) => (
-            <div className="service-card" key={service.id}>
+            <div 
+              className="service-card" 
+              key={service.id}
+              onClick={() => handleServiceClick(service.path)}
+              style={{ cursor: 'pointer' }}
+            >
               <div className="service-icon">
                 {service.icon}
               </div>
               <div className="service-content">
                 <h3>{service.title}</h3>
                 <p className="service-description">{service.description}</p>
-                <ul className="service-details">
-                  {service.details.map((item, index) => (
-                    <li key={index}>{item}</li>
-                  ))}
-                </ul>
               </div>
             </div>
           ))}
