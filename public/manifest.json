@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "IntegralDesign",
+  "name": "IntegralDesign - Semiconductor Design Services",
   "icons": [
     {
       "src": "favicon.ico",
@@ -19,7 +19,7 @@
     }
   ],
   "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
+  "display": "browser",
+  "theme_color": "#0d9788",
   "background_color": "#ffffff"
 }
