@@ -93,6 +93,19 @@
 
 
 
+/* Service page title section description */
+.service-title-section .service-description {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.95) !important;
+  line-height: 1.6;
+  margin-bottom: 0;
+  max-width: 650px;
+  margin: 0 auto;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  font-weight: 400;
+}
+
+/* General service description fallback */
 .service-description {
   font-size: 1.15rem;
   color: rgba(255, 255, 255, 0.95);
@@ -334,8 +347,9 @@
   overflow-wrap: break-word;
 }
 
-.service-description {
-  color: #000000;
+/* Home section service descriptions (Key Pillars) */
+.services-section .service-description {
+  color: #000000 !important;
   line-height: 1.5;
   margin-bottom: 0;
   font-size: 0.85rem;
@@ -429,6 +443,7 @@
     font-size: 1rem;
     padding: 0 1.5rem;
     line-height: 1.5;
+    color: rgba(255, 255, 255, 0.95) !important;
   }
 
   .service-content {
