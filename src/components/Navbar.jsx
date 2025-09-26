@@ -22,20 +22,7 @@ const Navbar = () => {
     handleNavigation(path);
   };
 
-  const handleAllServicesClick = () => {
-    if (location.pathname === '/') {
-      // If on homepage, scroll to services section
-      const servicesSection = document.getElementById('services');
-      if (servicesSection) {
-        servicesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-      closeMobileMenu();
-      setIsServicesDropdownOpen(false);
-    } else {
-      // If not on homepage, navigate to services page
-      handleNavigation('/services');
-    }
-  };
+  // handleAllServicesClick removed to avoid unused variable warning
   
   useEffect(() => {
     const handleScroll = () => {

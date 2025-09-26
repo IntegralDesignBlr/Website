@@ -1,16 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { HiArrowRight } from 'react-icons/hi2';
+// removed unused Link and HiArrowRight imports
 import './Hero.css';
 
 const HeroSection = () => {
-  const handleExploreClick = (e) => {
-    e.preventDefault();
-    const servicesSection = document.getElementById('services');
-    if (servicesSection) {
-      servicesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
+  // handleExploreClick is intentionally removed to avoid unused variable warning
 
   return (
     <section className="hero">

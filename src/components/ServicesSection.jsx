@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Services.css';
-import { FaBrain, FaAtom, FaMicrochip, FaMemory } from 'react-icons/fa';
+import { FaAtom } from 'react-icons/fa';
 import { GiProcessor, GiArtificialIntelligence } from 'react-icons/gi';
 import { MdPrecisionManufacturing } from 'react-icons/md';
 

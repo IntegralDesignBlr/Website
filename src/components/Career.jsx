@@ -1,11 +1,11 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+// removed unused useNavigate
 import './Career.css';
 import { HiLocationMarker, HiClock, HiBriefcase } from 'react-icons/hi';
 import { FaGraduationCap, FaCode, FaRocket } from 'react-icons/fa';
 
 const Career = () => {
-  const navigate = useNavigate();
+  // navigate removed because it was unused
 
   const jobOpenings = [
     {
