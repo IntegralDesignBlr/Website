@@ -37,10 +37,10 @@ const Footer = () => {
 
           <div className="footer-services">
             <h4>Our Services</h4>
-            <button type="button" onClick={() => handleNavigation('/services/risc-v')} className="footer-link">Analog and Mixed signal design</button>
-            <button type="button" onClick={() => handleNavigation('/services/semiconductors')} className="footer-link">Memories design</button>
+            <button type="button" onClick={() => handleNavigation('/services/risc-v')} className="footer-link">Analog & Mixed Signal Design</button>
+            <button type="button" onClick={() => handleNavigation('/services/semiconductors')} className="footer-link">Memories Design</button>
             <button type="button" onClick={() => handleNavigation('/services/ai-ml')} className="footer-link">AI ML</button>
-            <button type="button" onClick={() => handleNavigation('/services/quantum')} className="footer-link">Quantum computing</button>
+            <button type="button" onClick={() => handleNavigation('/services/quantum')} className="footer-link">Quantum Computing</button>
           </div>
 
           {/* <div className="footer-contact">

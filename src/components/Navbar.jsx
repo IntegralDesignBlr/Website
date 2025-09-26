@@ -77,10 +77,10 @@ const Navbar = () => {
   };
 
   const serviceItems = [
-    { path: '/services/risc-v', label: 'Analog and Mixed signal design', description: 'Analog & Mixed Signal Circuit Design' },
-    { path: '/services/semiconductors', label: 'Memories design', description: 'Memory Architecture & Design' },
+    { path: '/services/risc-v', label: 'Analog & Mixed Signal Design', description: 'Analog & Mixed Signal Circuit Design' },
+    { path: '/services/semiconductors', label: 'Memories Design', description: 'Memory Architecture & Design' },
     { path: '/services/ai-ml', label: 'AI ML', description: 'Artificial Intelligence & Machine Learning' },
-    { path: '/services/quantum', label: 'Quantum computing', description: 'Quantum systems and computation' }
+    { path: '/services/quantum', label: 'Quantum Computing', description: 'Quantum Systems & Computation' }
   ];
 
   const isServicesActive = location.pathname.startsWith('/services');

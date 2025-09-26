@@ -335,7 +335,7 @@
 }
 
 .service-description {
-  color: var(--text-dark);
+  color: #000000;
   line-height: 1.5;
   margin-bottom: 0;
   font-size: 0.85rem;

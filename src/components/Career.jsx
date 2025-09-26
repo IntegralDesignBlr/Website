@@ -10,43 +10,43 @@ const Career = () => {
   const jobOpenings = [
     {
       id: 1,
-      title: "Senior VLSI Design Engineer",
+      title: "Analog Circuit Design Intern",
       department: "Hardware Engineering",
-      location: "Bangalore, India",
-      type: "Full-time",
-      experience: "5-8 years",
-      description: "Lead analog and mixed-signal IC design projects from concept to tape-out.",
-      requirements: ["M.S./Ph.D in Electrical Engineering", "Experience with Cadence tools", "Analog circuit design expertise"]
+      location: "Remote/Hybrid",
+      type: "Internship",
+      experience: "0-1 years / Freshers",
+      description: "Work on analog circuit design projects and gain hands-on experience in semiconductor design.",
+      requirements: ["B.E./B.Tech in Electronics/Electrical Engineering", "Basic knowledge of analog circuits", "Eagerness to learn and grow"]
     },
     {
       id: 2,
-      title: "AI/ML Research Scientist",
-      department: "Research & Development",
+      title: "RTL Designer",
+      department: "Digital Design",
       location: "Remote/Hybrid",
       type: "Full-time",
-      experience: "3-6 years",
-      description: "Develop cutting-edge machine learning algorithms for semiconductor applications.",
-      requirements: ["Ph.D in Computer Science/AI", "Python, TensorFlow expertise", "Published research papers"]
+      experience: "0-1 years / Freshers",
+      description: "Design and develop RTL code for digital circuits and participate in verification activities.",
+      requirements: ["B.E./B.Tech in Electronics/Electrical Engineering", "Knowledge of Verilog/SystemVerilog", "Understanding of digital design concepts"]
     },
     {
       id: 3,
-      title: "Quantum Computing Engineer",
-      department: "Quantum Systems",
-      location: "Bangalore, India",
+      title: "Digital Verification Engineer",
+      department: "Verification",
+      location: "Remote/Hybrid",
       type: "Full-time",
-      experience: "2-5 years",
-      description: "Design and implement quantum algorithms for computational applications.",
-      requirements: ["M.S./Ph.D in Physics/Computer Science", "Quantum programming experience", "Knowledge of quantum hardware"]
+      experience: "0-1 years / Freshers",
+      description: "Perform verification of digital designs using industry-standard methodologies and tools.",
+      requirements: ["B.E./B.Tech in Electronics/Computer Science", "Knowledge of UVM/SystemVerilog", "Problem-solving skills"]
     },
     {
       id: 4,
-      title: "Memory Architecture Designer",
-      department: "Memory Solutions",
-      location: "Bangalore, India",
-      type: "Full-time",
-      experience: "4-7 years",
-      description: "Design high-performance, low-power memory architectures for next-gen applications.",
-      requirements: ["B.S./M.S. in Electrical Engineering", "SRAM/Flash memory design", "RTL design skills"]
+      title: "Physical Design Intern",
+      department: "Backend Design",
+      location: "Remote/Hybrid",
+      type: "Internship",
+      experience: "0-1 years / Freshers",
+      description: "Learn and work on physical design flow including placement, routing, and timing closure.",
+      requirements: ["B.E./B.Tech in Electronics/VLSI", "Basic understanding of VLSI design flow", "Willingness to learn new tools"]
     }
   ];
 

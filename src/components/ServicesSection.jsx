@@ -8,32 +8,6 @@ import { MdPrecisionManufacturing } from 'react-icons/md';
 const services = [
   {
     id: 1,
-    title: "AI & ML",
-    description: "Artificial Intelligence & Machine Learning solutions for next-gen applications.",
-    icon: <GiArtificialIntelligence size={32} />,
-    path: "/services/ai-ml",
-    details: [
-      "Foundation Models (LLMs, Vision Transformers)",
-      "Neural Architecture Search (NAS)",
-      "Edge & Federated Learning",
-      "Ethical & Explainable AI"
-    ]
-  },
-  {
-    id: 2,
-    title: "Quantum Computing",
-    description: "Hybrid quantum-classical systems and fault-tolerant computation research.",
-    icon: <FaAtom size={28} />,
-    path: "/services/quantum",
-    details: [
-      "Qubit Architectures (Superconducting, Ion Trap)",
-      "Quantum Error Correction",
-      "Quantum Compiler Development",
-      "Simulation of Quantum Circuits"
-    ]
-  },
-  {
-    id: 3,
     title: "Analog and Mixed signal design",
     description: "High-precision analog and mixed-signal circuits for advanced applications.",
     icon: <GiProcessor size={30} />,
@@ -46,7 +20,7 @@ const services = [
     ]
   },
   {
-    id: 4,
+    id: 2,
     title: "Memories Design",
     description: "Advanced memory architectures and high-performance storage solutions.",
     icon: <MdPrecisionManufacturing size={30} />,
@@ -56,6 +30,32 @@ const services = [
       "Flash Memory Architecture",
       "Memory Controller Design",
       "High-Speed Memory Interfaces"
+    ]
+  },
+  {
+    id: 3,
+    title: "AI & ML",
+    description: "Artificial Intelligence & Machine Learning solutions for next-gen applications.",
+    icon: <GiArtificialIntelligence size={32} />,
+    path: "/services/ai-ml",
+    details: [
+      "Foundation Models (LLMs, Vision Transformers)",
+      "Neural Architecture Search (NAS)",
+      "Edge & Federated Learning",
+      "Ethical & Explainable AI"
+    ]
+  },
+  {
+    id: 4,
+    title: "Quantum Computing",
+    description: "Hybrid quantum-classical systems and fault-tolerant computation research.",
+    icon: <FaAtom size={28} />,
+    path: "/services/quantum",
+    details: [
+      "Qubit Architectures (Superconducting, Ion Trap)",
+      "Quantum Error Correction",
+      "Quantum Compiler Development",
+      "Simulation of Quantum Circuits"
     ]
   }
 ];
