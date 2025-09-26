@@ -29,9 +29,10 @@
 }
 
 .navbar-logo img {
-  height: 40px;
+  height: 75px;
   margin-right: 10px;
   object-fit: contain;
+  filter: drop-shadow(0 0 1px rgba(0.1, 0.1, 0.1, 0.4)) drop-shadow(0 0 2px rgba(1, 1, 1, 10));
 }
 
 .navbar-logo span {

@@ -22,7 +22,7 @@ const ClientsSection = () => {
           {clients.map((client) => (
             <div className="client-logo" key={client.id}>
               <img 
-                src={`/New_Web/images/${client.logo}.jpg`} 
+                src={`/images/${client.logo}.jpg`} 
                 alt={client.name} 
                 title={client.name}
               />

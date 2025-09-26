@@ -114,10 +114,10 @@ main, .hero, .section { margin-top: 80px; }
   background-position: center;
   z-index: -1;
 }
-#about.section::before    { background-image: url('./assets/about-bg.jpg'); }
-#services.section::before { background-image: url('./assets/services-bg.jpg'); }
-#team.section::before     { background-image: url('./assets/team-bg.jpg'); }
-#contact.section::before  { background-image: url('./assets/contact-bg.jpg'); }
+#about.section::before    { background-image: url('/images/backgrounds/abstract-art-1.jpg'); }
+#services.section::before { background-image: url('/images/backgrounds/digital-wave.jpg'); }
+#team.section::before     { background-image: url('/images/backgrounds/abstract-art-2.jpg'); }
+#contact.section::before  { background-image: url('/images/backgrounds/tech-bg.jpg'); }
 
 .section h2 { color: var(--accent); font-size: 2rem; margin-bottom: 1.5rem; }
 .section p  { line-height: 1.6; margin-bottom: 1.5rem; }
