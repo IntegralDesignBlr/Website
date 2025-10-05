@@ -21,19 +21,32 @@ const SemiconductorsPage = () => {
           <section className="service-section">
             <h2>Services</h2>
             <ul>
-              <li><strong>Decision Analog Design:</strong> High-performance ADC/DACs, amplifiers, signal conditioning</li>
-              <li><strong>SRAM Design:</strong> Low-power SRAM cells, custom cache hierarchies, process-aware optimization</li>
-              <li><strong>Physical Design:</strong> Floorplanning, P&R, DRC/LVS verification</li>
-              <li><strong>EDA Toolchains:</strong> OpenROAD, Synopsys, Cadence integrations</li>
+              <li><strong>SRAM Design:</strong> High-density, low-power SRAM cells with advanced leakage control</li>
+              <li><strong>DRAM Architecture:</strong> Next-generation DDR and LPDDR memory solutions</li>
+              <li><strong>Non-Volatile Memory:</strong> Flash, MRAM, ReRAM, and emerging memory technologies</li>
+              <li><strong>Memory Controllers:</strong> High-performance controllers with advanced error correction</li>
+              <li><strong>Cache Hierarchies:</strong> Custom L1/L2/L3 cache designs for processors</li>
+            </ul>
+          </section>
+
+          <section className="service-section">
+            <h2>Tools & Technologies</h2>
+            <ul>
+              <li><strong>Memory Compilers:</strong> Synopsys, Cadence memory generators and bit-cell libraries</li>
+              <li><strong>Timing Analysis:</strong> PrimeTime, Tempus for memory timing closure</li>
+              <li><strong>Power Analysis:</strong> PowerArtist, Voltus for memory power optimization</li>
+              <li><strong>Physical Design:</strong> ICC2, Innovus for memory layout and routing</li>
+              <li><strong>Verification:</strong> Memory BIST, scan testing, and functional verification</li>
             </ul>
           </section>
 
           <section className="service-section">
             <h2>Focus Areas</h2>
             <ul>
-              <li>Low-power compute chips</li>
-              <li>AI-specific chiplets</li>
-              <li>3D IC and advanced packaging</li>
+              <li>Ultra-low power memory for IoT and mobile applications</li>
+              <li>High-bandwidth memory for AI/ML acceleration</li>
+              <li>Automotive-grade memory with functional safety</li>
+              <li>3D stacked memory architectures</li>
             </ul>
           </section>
         </main>

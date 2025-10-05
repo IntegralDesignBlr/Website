@@ -19,21 +19,23 @@ const RISCVPage = () => {
 
         <main className="service-content">
           <section className="service-section">
-            <h2>Core Projects</h2>
+            <h2>Services</h2>
             <ul>
-              <li>Custom ISA Extensions for ML Workloads</li>
-              <li>Secure Boot and Isolation Techniques</li>
-              <li>Microarchitecture Design and RTL</li>
-              <li>Integration with AI accelerators and NPUs</li>
+              <li><strong>High-Speed Data Converters:</strong> ADC/DAC design with industry-leading precision and speed</li>
+              <li><strong>Precision Analog Circuits:</strong> Operational amplifiers, voltage references, and signal conditioning</li>
+              <li><strong>Mixed-Signal Integration:</strong> Seamless analog-digital interface design</li>
+              <li><strong>Low-Power Design:</strong> Power management units and energy-efficient analog blocks</li>
+              <li><strong>RF & Wireless:</strong> RF front-ends, PLLs, and wireless communication circuits</li>
             </ul>
           </section>
 
           <section className="service-section">
             <h2>Tools & Technologies</h2>
             <ul>
-              <li>Verilog, Chisel, OpenROAD, RocketChip</li>
-              <li>Formal Verification and Simulation</li>
-              <li>Performance Monitoring and Tuning</li>
+              <li><strong>Design Tools:</strong> Cadence Virtuoso, Synopsys Custom Compiler, Mentor Graphics</li>
+              <li><strong>Simulation:</strong> SPICE, Spectre, AFS, Eldo for accurate circuit modeling</li>
+              <li><strong>Layout & Verification:</strong> Calibre, ICV for DRC/LVS verification</li>
+              <li><strong>Process Technologies:</strong> 28nm, 16nm, 7nm FinFET and beyond</li>
             </ul>
           </section>
         </main>
